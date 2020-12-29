@@ -48,8 +48,9 @@ html, button {
   --spacing10: 1rem;
   --spacing12: 1.2rem;
   --spacing14: 1.4rem;
-  --spacing16: 1.4rem;
-  --spacing18: 1.8rem;
+  --spacing16: 1.6rem;
+  --spacing24: 2.4rem;
+  --spacing32: 3.2rem;
 
   /* box-like padding sizes */
   --padding-box--lg: var(--spacing10) var(--spacing18);
