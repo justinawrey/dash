@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
 html {
   height: 100%;
 }
@@ -8,4 +10,56 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--dark);
+}
+
+html, button {
+  font-family: 'Raleway', sans-serif;
+}
+
+:root {
+  /* colors */
+  --dark-h: 221;
+  --dark-s: 26%;
+  --dark-l: 21%;
+  --dark: hsl(var(--dark-h), var(--dark-s), var(--dark-l)); /* #283043 */
+  --dark--lighter: hsl(var(--dark-h), var(--dark-s), calc(var(--dark-l) + 1%));
+
+  --light-h: 113;
+  --light-s: 31%;
+  --light-l: 95%; /* #EFF6EE */
+  --light: hsl(var(--light-h), var(--light-s), var(--light-l));
+
+  --focus: lightgreen;
+
+  /* font sizes */
+  --fs--xl: 4rem;
+  --fs--lg: 3rem;
+  --fs--md: 2rem;
+  --fs--sm: 1.5rem;
+  --fs--xs: 1rem;
+
+  /* spacing */
+  --spacing1: 0.1rem;
+  --spacing2: 0.2rem; 
+  --spacing4: 0.4rem;
+  --spacing6: 0.6rem;
+  --spacing8: 0.8rem;
+  --spacing10: 1rem;
+  --spacing12: 1.2rem;
+  --spacing14: 1.4rem;
+  --spacing16: 1.4rem;
+  --spacing18: 1.8rem;
+
+  /* box-like padding sizes */
+  --padding-box--lg: var(--spacing10) var(--spacing18);
+  --padding-box--md: var(--spacing8) var(--spacing10);
+  --padding-box--sm: var(--spacing6) var(--spacing8);
+
+  /* box-shadow */
+  --box-shadow-color--light: hsla(var(--light-h), var(--light-s), var(--light-l), 0.25);
+  --box-shadow--sm: 0 0 var(--spacing6) 0 var(--box-shadow-color--light);
+  --box-shadow--md: 0 0 var(--spacing8) 0 var(--box-shadow-color--light);
+  --box-shadow--lg: 0 0 var(--spacing10) 0 var(--box-shadow-color--light);
+  --box-shadow--xl: 0 0 var(--spacing12) 0 var(--box-shadow-color--light);
 }

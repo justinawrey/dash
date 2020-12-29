@@ -1,5 +1,5 @@
 <script>
-  let hello = "Hello world!";
+  import Button from "./Button.svelte";
 </script>
 
-<p>{hello}</p>
+<Button size="sm">Click me!</Button>
