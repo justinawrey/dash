@@ -19,6 +19,10 @@
     align-items: center;
   }
 
+  .vertical-centered :global(button) {
+    background-color: transparent;
+  }
+
   .header,
   .subheader {
     margin: 0;
