@@ -46,10 +46,10 @@ export default {
         dev: !production
       }
     }),
-    babel({
-      extensions: [".js", ".mjs", ".html", ".svelte"],
-      babelHelpers: 'bundled'
-    }),
+    // babel({
+    //   extensions: [".js", ".mjs", ".html", ".svelte"],
+    //   babelHelpers: 'bundled'
+    // }),
     postcss({
       extract: path.resolve('public', 'build', 'bundle.css'),
       minimize: production,

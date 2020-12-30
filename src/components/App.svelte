@@ -1,4 +1,5 @@
 <script>
+  import Background from "./Background.svelte";
   import Button from "./Button.svelte";
 </script>
 
@@ -7,6 +8,8 @@
   <h2 class="subheader">One stop web designer + developer.</h2>
   <Button size="sm">Take the tour 🕵️</Button>
 </div>
+
+<Background />
 
 <style>
   .vertical-centered {
