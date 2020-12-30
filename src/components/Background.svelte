@@ -4,7 +4,6 @@
 
   const orientations = ["horizontal", "vertical"];
   const colors = ["#86862d", "#325d67", "#603666", "#854747", "grey"];
-  3;
 
   let id = 0;
   let interval;
@@ -53,8 +52,6 @@
   onDestroy(() => {
     clearInterval(interval);
   });
-
-  $: console.log(blocks);
 </script>
 
 {#each blocks as { id, ...block } (id)}

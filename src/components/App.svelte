@@ -1,6 +1,7 @@
 <script>
   import Background from "./Background.svelte";
   import Button from "./Button.svelte";
+  import TrackMouse from "./TrackMouse.svelte";
 </script>
 
 <div class="vertical-centered">
@@ -10,6 +11,7 @@
 </div>
 
 <Background />
+<TrackMouse />
 
 <style>
   .vertical-centered {
