@@ -15,9 +15,9 @@
 
   function createBlock() {
     const orientation = orientations[randomIntFromInterval(0, 1)];
-    const duration = randomIntFromInterval(8000, 10000);
+    const duration = randomIntFromInterval(10000, 20000);
     const offset = randomIntFromInterval(0, 100);
-    const size = randomIntFromInterval(100, 200);
+    const size = randomIntFromInterval(75, 250);
     const color = colors[randomIntFromInterval(0, 4)];
 
     return {
@@ -34,19 +34,23 @@
     blocks = blocks.filter((block) => block.id !== id);
   }
 
-  function staggerInFourBlocks() {
-    [1000, 2000, 3000, 4000].forEach((delay) => {
+  function staggerInBlocksAt() {
+    [...arguments].forEach((delay) => {
       setTimeout(() => {
         blocks = [...blocks, createBlock()];
       }, delay);
     });
   }
 
-  onMount(() => {
-    staggerInFourBlocks();
+  function startBlocks() {
+    staggerInBlocksAt(1000, 2000, 3000, 10000);
     interval = setInterval(() => {
-      staggerInFourBlocks();
-    }, 8000);
+      staggerInBlocksAt(1000, 2000, 3000, 10000);
+    }, 15000);
+  }
+
+  onMount(() => {
+    startBlocks();
   });
 
   onDestroy(() => {
