@@ -1,4 +1,6 @@
 <script>
+  import { isDarkTheme } from "../theme";
+
   export let orientation;
   export let duration;
   export let offset;
@@ -15,6 +17,9 @@
   $: height = isHorizontal ? `${size}px` : "100%";
   $: top = isHorizontal ? `${offset}%` : "0";
   $: left = isHorizontal ? "0" : `${offset}%`;
+  $: filter = `grayscale(50%) opacity(${$isDarkTheme ? 20 : 10}%) saturate(${
+    $isDarkTheme ? 80 : 150
+  }%)`;
   $: transform = isHorizontal
     ? `translateX(${updated ? "" : "-"}100%)`
     : `translateY(${updated ? "" : "-"}100%)`;
@@ -28,7 +33,8 @@
          left: {left};
          background-color: {color};
          transition-duration: {duration}ms;
-         transform: {transform};"
+         transform: {transform};
+         filter: {filter}"
   on:transitionend
 />
 
@@ -36,8 +42,7 @@
   .background-block {
     z-index: -1;
     position: absolute;
-    transition-property: transform;
+    transition-property: transform, filter;
     transition-timing-function: linear;
-    filter: grayscale(70%) opacity(50%);
   }
 </style>

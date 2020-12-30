@@ -1,5 +1,5 @@
 <script>
-  import { nextSizes } from "../theme/sizing";
+  import { nextSizes } from "../theme";
 
   export let size = "md";
   const nextSize = nextSizes[size];
@@ -23,8 +23,8 @@
     background-color: var(--dark);
     border: 1px solid var(--light);
     cursor: pointer;
-    transition-property: background-color, box-shadow, border-color;
-    transition-duration: 300ms;
+    transition-property: background-color, box-shadow, border-color, color;
+    transition-duration: 500ms;
     overflow: hidden;
   }
 

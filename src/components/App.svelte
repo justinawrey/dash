@@ -1,6 +1,7 @@
 <script>
   import Background from "./Background.svelte";
   import Button from "./Button.svelte";
+  import ThemePicker from "./ThemePicker.svelte";
   import TrackMouse from "./TrackMouse.svelte";
 </script>
 
@@ -12,6 +13,7 @@
 
 <Background />
 <TrackMouse />
+<ThemePicker />
 
 <style>
   .vertical-centered {
@@ -29,6 +31,7 @@
   .subheader {
     margin: 0;
     color: var(--light);
+    transition: color 500ms;
   }
 
   .header {
