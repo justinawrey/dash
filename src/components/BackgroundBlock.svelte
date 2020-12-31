@@ -17,9 +17,9 @@
   $: height = isHorizontal ? `${size}px` : "100%";
   $: top = isHorizontal ? `${offset}%` : "0";
   $: left = isHorizontal ? "0" : `${offset}%`;
-  $: filter = `grayscale(50%) opacity(${$isDarkTheme ? 20 : 10}%) saturate(${
-    $isDarkTheme ? 80 : 150
-  }%)`;
+  $: filter = `grayscale(50%) opacity(${
+    $isDarkTheme ? "20" : "10"
+  }%) saturate(${$isDarkTheme ? "80" : "150"}%)`;
   $: transform = isHorizontal
     ? `translateX(${updated ? "" : "-"}100%)`
     : `translateY(${updated ? "" : "-"}100%)`;
@@ -42,7 +42,7 @@
   .background-block {
     z-index: -1;
     position: absolute;
-    transition-property: transform, filter;
+    transition-property: transform;
     transition-timing-function: linear;
   }
 </style>

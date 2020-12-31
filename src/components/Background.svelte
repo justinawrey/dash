@@ -58,6 +58,8 @@
   });
 </script>
 
-{#each blocks as { id, ...block } (id)}
-  <BackgroundBlock {...block} on:transitionend={() => removeBlock(id)} />
-{/each}
+<div>
+  {#each blocks as { id, ...block } (id)}
+    <BackgroundBlock {...block} on:transitionend={() => removeBlock(id)} />
+  {/each}
+</div>
