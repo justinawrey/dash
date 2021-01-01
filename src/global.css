@@ -55,7 +55,7 @@ html, button {
   --spacing32: 3.2rem;
 
   /* box-like padding sizes */
-  --padding-box--lg: var(--spacing10) var(--spacing18);
+  --padding-box--lg: var(--spacing10) var(--spacing16);
   --padding-box--md: var(--spacing8) var(--spacing10);
   --padding-box--sm: var(--spacing6) var(--spacing8);
 
