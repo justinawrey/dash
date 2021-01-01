@@ -1,5 +1,4 @@
 import svelte from 'rollup-plugin-svelte';
-import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
@@ -36,9 +35,9 @@ export default {
   input: 'src/main.js',
   output: {
     sourcemap: !production,
-    format: 'iife',
+    format: 'es',
     name: 'app',
-    file: path.resolve('public', 'build', 'bundle.js')
+    file: path.resolve('public', 'build', 'bundle-esm.mjs')
   },
   plugins: [
     svelte({
@@ -46,10 +45,6 @@ export default {
         dev: !production
       }
     }),
-    // babel({
-    //   extensions: [".js", ".mjs", ".html", ".svelte"],
-    //   babelHelpers: 'bundled'
-    // }),
     postcss({
       extract: path.resolve('public', 'build', 'bundle.css'),
       minimize: production,
