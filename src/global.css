@@ -12,6 +12,7 @@ body {
   align-items: center;
   background-color: var(--dark);
   transition: background-color 500ms;
+  overflow: hidden;
 }
 
 html, button {
