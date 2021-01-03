@@ -1,23 +1,24 @@
 <script>
-  import { push, pageFade } from "../routes/routeUtil";
+  import { push } from "../routes/routeUtil";
+  import Page from "./Page.svelte";
   import Button from "./Button.svelte";
 </script>
 
-<div class="vertical-centered" in:pageFade={{ delay: 500 }} out:pageFade>
+<Page className="page-home">
   <h1 class="header">Justin Awrey</h1>
   <h2 class="subheader">One stop web designer + developer.</h2>
   <Button size="sm" on:click={() => push('/blog')}>Take the tour 🕵️</Button>
-</div>
+</Page>
 
 <style>
-  .vertical-centered {
+  :global(.page-home) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .vertical-centered :global(button) {
+  :global(.page) :global(button) {
     background-color: transparent;
   }
 
