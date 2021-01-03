@@ -1,5 +1,5 @@
 <script>
-  import { push, pageFade } from "../routes";
+  import { push, pageFade } from "../routes/routeUtil";
   import Button from "./Button.svelte";
 </script>
 
