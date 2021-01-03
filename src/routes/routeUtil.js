@@ -1,11 +1,9 @@
 import { fade } from 'svelte/transition';
-import { push as routerPush } from 'svelte-spa-router'
 
 let freshLoad = true;
 
-export function push(path) {
+export function setLoaded() {
   freshLoad = false;
-  routerPush(path)
 }
 
 export function pageFade(node, params) {
@@ -14,6 +12,6 @@ export function pageFade(node, params) {
     params.delay = 0;
   }
 
-  params.duration = 500;
+  params.duration = freshLoad ? 650 : 200;
   return fade(node, params);
 }

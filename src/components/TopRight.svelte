@@ -26,7 +26,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    fill: var(--light);
   }
 
   a {
@@ -35,5 +34,6 @@
 
   a :global(svg) {
     fill: var(--light);
+    transition: fill 500ms linear;
   }
 </style>

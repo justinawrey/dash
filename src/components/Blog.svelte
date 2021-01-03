@@ -1,5 +1,5 @@
 <script>
-  import { push } from "../routes/routeUtil";
+  import { push } from "svelte-spa-router";
   import posts from "../posts";
   import Page from "./Page.svelte";
   import BlogPostCompact from "./BlogPostCompact.svelte";

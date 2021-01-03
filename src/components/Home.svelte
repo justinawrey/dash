@@ -1,5 +1,5 @@
 <script>
-  import { push } from "../routes/routeUtil";
+  import { push } from "svelte-spa-router";
   import Page from "./Page.svelte";
   import Button from "./Button.svelte";
 </script>
@@ -18,7 +18,7 @@
     align-items: center;
   }
 
-  :global(.page) :global(button) {
+  :global(.page-home) :global(button) {
     background-color: transparent;
   }
 
