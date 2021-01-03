@@ -2,7 +2,7 @@
   import Router from "svelte-spa-router";
   import Background from "./Background.svelte";
   import TrackMouse from "./TrackMouse.svelte";
-  import ThemePicker from "./ThemePicker.svelte";
+  import TopRight from "./TopRight.svelte";
 
   import routes from "../routes";
 </script>
@@ -10,4 +10,4 @@
 <Router {routes} />
 <Background />
 <TrackMouse />
-<ThemePicker />
+<TopRight />

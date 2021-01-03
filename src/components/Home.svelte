@@ -1,10 +1,9 @@
 <script>
-  import { fade } from "svelte/transition";
-  import { push } from "svelte-spa-router";
+  import { push, pageFade } from "../routes";
   import Button from "./Button.svelte";
 </script>
 
-<div class="vertical-centered" in:fade>
+<div class="vertical-centered" in:pageFade={{ delay: 500 }} out:pageFade>
   <h1 class="header">Justin Awrey</h1>
   <h2 class="subheader">One stop web designer + developer.</h2>
   <Button size="sm" on:click={() => push('/blog')}>Take the tour 🕵️</Button>

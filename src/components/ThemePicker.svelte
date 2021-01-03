@@ -11,7 +11,7 @@
   $: theme = $isDarkTheme ? "dark" : "light";
 </script>
 
-<div class="corner">
+<div class="picker">
   {#if $isDarkTheme}
     <Moon />
   {:else}
@@ -21,16 +21,11 @@
 </div>
 
 <style>
-  .corner {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .picker {
+    position: relative;
   }
 
-  .corner :global(#moon),
+  .picker :global(#moon),
   :global(#sun) {
     position: absolute;
     top: 29px;
@@ -41,7 +36,7 @@
     fill: var(--light);
   }
 
-  .corner :global(#sun) {
+  .picker :global(#sun) {
     transform: translateX(22px);
     top: 27px;
     left: 25px;
