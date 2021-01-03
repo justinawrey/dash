@@ -20,10 +20,10 @@
   button {
     position: relative;
     color: var(--light);
-    background-color: var(--dark);
     border: 1px solid var(--light);
     cursor: pointer;
-    transition-property: background-color, box-shadow, border-color, color;
+    background-color: transparent;
+    transition-property: box-shadow, border-color, color;
     transition-duration: 500ms;
     overflow: hidden;
   }
@@ -48,7 +48,6 @@
 
   button:hover {
     box-shadow: var(--box-shadow--next) !important;
-    background-color: var(--dark--lighter);
   }
 
   button:hover::before {

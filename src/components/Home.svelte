@@ -18,10 +18,6 @@
     align-items: center;
   }
 
-  :global(.page-home) :global(button) {
-    background-color: transparent;
-  }
-
   .header,
   .subheader {
     margin: 0;
